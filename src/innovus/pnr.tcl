@@ -1,7 +1,7 @@
 source asap7.tcl
 
 # Change the design name here
-set DESIGN_NAME ac97_top
+set DESIGN_NAME mc_top
 set design_dir "../../designs/$DESIGN_NAME"
 
 setLibraryUnit -time 1ps -cap 1ff
@@ -14,6 +14,7 @@ set init_lef_file  "${lefs}"
 set init_mmmc_file "mmmc_innovus.tcl"
 set init_verilog   "$design_dir/genus.v"
 
+source $init_mmmc_file
 # initial design
 init_design -setup {WC_VIEW} -hold {BC_VIEW}
 set_analysis_view -setup WC_VIEW -hold BC_VIEW -leakage WC_VIEW -dynamic WC_VIEW

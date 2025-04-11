@@ -27,5 +27,3 @@ set sdc "$design_dir/timing_func.sdc"
 create_constraint_mode -name CON -sdc_file $sdc
 create_analysis_view -name WC_VIEW -delay_corner WC -constraint_mode CON
 create_analysis_view -name BC_VIEW -delay_corner BC -constraint_mode CON
-
-set_analysis_view -setup WC_VIEW -hold BC_VIEW
